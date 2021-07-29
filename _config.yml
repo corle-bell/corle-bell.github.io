@@ -2,12 +2,12 @@
 title: 坏人的博客
 SEOTitle: 坏人的博客
 header-img: img/post-bg-desk.jpg
-email: klovien@gmail.com
-description: "中西融合, 即学即会, 从此不再辛苦背单词"
-keyword: "人工语言, 国际语, 世界语, 三叶草国际语, 三叶语"
-url: "https://klovien.github.io"          # your host, for absolute URL
+email: tswcbyy12138@qq.com
+description: "怒马鲜衣少年郎"
+keyword: "Unity杂谈 人生杂谈"
+url: "https://corle-bell.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/klovien/klovien.github.io.git" # you code repository
+github_repo: "https://github.com/corle-bell/corle-bell.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -64,9 +64,9 @@ gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: d18b343dd9c7ca49518a                            #生成的clientID
   clientSecret: 539e88b8a7feffaddbb553b9c421dfefcbc6eced    #生成的clientSecret
-  repo: klovien.github.io    #仓库名称
-  owner: klovien    #github用户名
-  admin: klovien
+  repo: corle-bell.github.io    #仓库名称
+  owner: corle-bell    #github用户名
+  admin: corle-bell
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
