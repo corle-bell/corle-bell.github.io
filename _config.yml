@@ -62,8 +62,8 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: d18b343dd9c7ca49518a                            #生成的clientID
-  clientSecret: 539e88b8a7feffaddbb553b9c421dfefcbc6eced    #生成的clientSecret
+  clientID: 202c4405d7b5bf5fe9cf                            #生成的clientID
+  clientSecret: 336c26a7dae69bc5061896ba082d3c3fd5349196    #生成的clientSecret
   repo: corle-bell.github.io    #仓库名称
   owner: corle-bell    #github用户名
   admin: corle-bell
