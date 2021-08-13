@@ -1,13 +1,13 @@
 ---
 layout:     post
 title:      Unity UGUI Mask组件实现原理
-subtitle:   副标题
+subtitle:   文章转载
 date:       2021-08-13
 author:     坏人
 header-img: img/the-first.png
 catalog: false
 tags:
-    - Unity杂谈 -转载
+    - Unity杂谈 
 ---
 
 
