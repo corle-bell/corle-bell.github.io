@@ -68,15 +68,7 @@ tags:
 | radians(x) | radians(x) | 函数将角度值转换为弧度值 |
 | degrees(x) | degrees(x) | 输入参数为弧度值(radians)，函数将其转换为角度值(degrees) |
 | cross(A,B) | cross(A,B) | 返回两个三元向量的叉积(cross product)。注意，输入参数必须是三元向量！ |
-| lit(NdotL, NdotH, m) |  | 函数计算环境光、散射光、镜面光的贡献，返回的4元向量。
-N表示法向量；
-L表示入射光向量；
-H表示半角向量；
-m表示高光系数。
-X位表示环境光的贡献，总是1.0;
-Y位代表散射光的贡献，如果 N∙L<0，则为0；否则为N∙L
-Z位代表镜面光的贡献，如果N∙L<0 或者N∙H<0，则位0；否则为(N∙L)m;
-W位始终位1.0 |
+| lit(NdotL, NdotH, m) |  | 函数计算环境光、散射光、镜面光的贡献，返回的4元向量。<br>N表示法向量；<br>L表示入射光向量；<br>H表示半角向量；<br>m表示高光系数。<br>X位表示环境光的贡献，总是1.0;<br>Y位代表散射光的贡献，如果 N∙L<0，则为0；否则为N∙L<br>Z位代表镜面光的贡献，如果N∙L<0 或者N∙H<0，则位0；否则为(N∙L)m;<br>W位始终位1.0 |
 | all(x) | all(x) | 如果输入参数均不为0，则返回ture； 否则返回flase。&&运算 |
 | any(x) | any(x) | 输入参数只要有其中一个不为0，则返回true。 |
 | isfinite(x) |  | 判断标量或者向量中的每个数据是否是有限数，如果是返回true；否则返回false; |
@@ -86,15 +78,10 @@ W位始终位1.0 |
 | sign(x) | sign(x) | 如果x>0则返回1；如果x=0返回0；如果x<0则返回-1 |
 | dot(A,B) | dot(A,B) | 返回A和B的点积(dot product)。参数A和B可以是标量，也可以是向量（输入参数方面，点积和叉积函数有很大不同）。 |
 | noise(x) |  | 根据它的参数类型，这个函数可以是一元、二元或三元噪音函数。返回的值在0和1之间，并且通常与给定的输入值一样 |
-| clamp(x,a,b) | clamp(x,a,b) | 如果x值小于a，则返回a；
-如果x值大于b，返回b；
-否则，返回x。 |
+| clamp(x,a,b) | clamp(x,a,b) | 如果x值小于a，则返回a；<br>如果x值大于b，返回b；<br>否则，返回x。 |
 | lerp(a, b, f) | mix(a, b, f) | 计算或者的值。即在下限a和上限b之间进行插值，f表示权值。注意，如果a和b是向量，则权值f必须是标量或者等长的向量。 |
 | saturate(x) |  | 把x限制到[0,1]之间 |
-| smoothstep(min, max, x) | smoothstep(min, max, x) | 值x位于min、max区间中。
-如果x=min，返回0；如果x=max，返回1；
-如果x在两者之间，按照下列公式返回数据：
-– 2 ∗ ( ( x – m i n ) / ( m a x – m i n ) ) 3 + 3 ∗ ( ( x – m i n ) / ( m a x – m i n ) ) 2 \def\bar#1{#1^3} \bar{–2*(( x – min )/( max – min ))} + \def\bar#1{#1^2} \bar{3*(( x – min )/( max – min ))} –2∗((x–min)/(max–min))3+3∗((x–min)/(max–min))2 |
+| smoothstep(min, max, x) | smoothstep(min, max, x) | 值x位于min、max区间中。<br>如果x=min，返回0；如果x=max，返回1；<br>如果x在两者之间，按照下列公式返回数据：<br>– 2 ∗ ( ( x – m i n ) / ( m a x – m i n ) ) 3 + 3 ∗ ( ( x – m i n ) / ( m a x – m i n ) ) 2 \def\bar#1{#1^3} \bar{<br>2*(( x – min )/( max – min ))} + \def\bar#1{#1^2} \bar{3*(( x – min )/( max – min ))} –2∗((x–min)/(max<br>min))3+3∗((x–min)/(max–min))2 |
 
 smoothstep(min, max, x)对于参数全是float的重载
 
@@ -115,12 +102,7 @@ float smoothstep(float a, float b, float x)
 | faceforward(N,I,Ng) | faceforward(N,I,Ng) | 根据 矢量 N 与Nref 调整法向量,如果Ng•I < 0 ，返回 N；否则返回-N。 |
 | length(v) | length(v) | 返回一个向量的模，即sqrt(dot(v,v)) |
 | normalize(v) | normalize(v) | 返回v向量的单位向量 |
-| reflect(I, N) | reflect(I, N) | 根据入射光方向向量 I，和顶点法向量 N，计算反射光方向向量。
-其中 I 和 N 必须被归一化，需要非常注意的是，这个 I 是指向顶点的；
-函数只对三元向量有效 |
-| refract(I,N,eta) | refract(I,N,eta) | 计算折射向量，I 为入射光线，N 为法向量，eta 为折射系数；
-其中 I 和 N 必须被归一化，如果 I 和 N 之间的夹角太大，则返回（0，0，0），也就是没有折射光线；I 是指向顶点的；
-函数只对三元向量有效 |
+| reflect(I, N) | reflect(I, N) | 根据入射光方向向量 I，和顶点法向量 N，计算反射光方向向量。<br>其中 I 和 N 必须被归一化，需要非常注意的是，这个 I 是指向顶点的；<br>函数只对三元向量有效 |<br>| refract(I,N,eta) | refract(I,N,eta) | 计算折射向量，I 为入射光线，N 为法向量，eta 为折射系数；<br>其中 I 和 N 必须被归一化，如果 I 和 N 之间的夹角太大，则返回（0，0，0），也就是没有折射光线；I 是指向顶点的；<br>函数只对三元向量有效 |
 
 ## 3、纹理映射函数
 
